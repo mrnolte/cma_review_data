@@ -1,0 +1,54 @@
+A1;A2;A3;A4;A5;A6;A7;B1;B2;B3;B4;B5;B6;B7;C1;C2;C3;C4;C5;C6;;;
+ACNF;D;D;D;P;ND;ND;ND;P;ND;ND;ND;ND;ND;P;ND;ND;ND;ND;ND;;;
+ACT-R;D;D;P;P;P;P;P;P;P;ND;P;P;P;D;D;ND;P;P;P;;;
+ALMA 2.0;D;D;D;P;D;D;D;P;D;P;P;P;D;D;D;D;P;D;P;;;
+AML 11;D;D;D;ND;ND;P;D;D;D;ND;D;ND;ND;D;P;P;P;P;D;;;
+ArmarX;D;D;D;P;D;P;D;P;ND;ND;P;D;D;ND;P;ND;ND;ND;D;;;
+BCP13;D;D;ND;D;ND;P;D;P;ND;ND;ND;P;D;D;ND;P;ND;ND;ND;;;
+BICA Family;D;D;D;D;D;P;D;D;P;D;P;D;ND;D;P;P;P;P;ND;;;
+CARINA;D;D;D;ND;D;P;D;D;ND;D;D;ND;D;D;P;P;P;ND;D;;;
+CLARION;D;D;D;D;P;P;D;D;P;P;P;P;ND;ND;ND;P;ND;P;P;;;
+CRAM;D;D;D;D;ND;ND;D;D;D;D;D;D;D;D;ND;D;P;ND;D;;;
+D20;D;D;D;D;P;ND;D;D;ND;ND;ND;ND;D;D;D;P;D;P;D;;;
+FAtiMA;D;D;D;D;ND;ND;P;D;P;D;D;ND;ND;D;P;P;ND;ND;ND;;;
+FORR;D;D;D;D;ND;ND;ND;P;ND;ND;D;ND;ND;ND;P;ND;P;ND;ND;;;
+H13;D;D;D;ND;ND;ND;D;D;D;P;ND;ND;ND;D;D;ND;D;ND;ND;;;
+H-Cogaff;D;D;D;D;D;P;D;D;P;P;P;P;ND;D;D;P;D;ND;ND;;;
+ISAAC;D;D;D;D;D;D;D;D;ND;P;ND;D;D;D;P;D;D;P;P;;;
+K10;D;D;D;ND;ND;D;ND;ND;ND;P;ND;ND;ND;D;ND;ND;D;ND;ND;;;
+K12;D;D;D;P;D;ND;D;D;D;ND;ND;ND;ND;D;D;ND;ND;ND;ND;;;
+K21;D;D;D;D;ND;ND;D;P;ND;ND;ND;ND;ND;D;ND;P;D;ND;ND;;;
+KS02;D;D;D;ND;ND;D;D;D;ND;ND;P;P;ND;D;ND;ND;D;P;P;;;
+MAMID;D;D;D;D;ND;P;D;D;ND;ND;ND;D;ND;D;P;ND;ND;ND;ND;;;
+MCL Family;D;D;D;D;D;P;D;P;P;P;D;D;P;D;P;D;D;ND;P;;;
+Meta-AQUA;D;D;D;ND;D;D;D;D;D;D;D;ND;D;D;D;D;D;ND;D;;;
+Metacat;D;D;D;ND;D;D;D;D;D;ND;D;ND;ND;D;D;D;D;ND;P;;;
+MIDCA;D;D;D;ND;D;P;D;D;ND;P;D;D;D;D;D;P;P;P;D;;;
+MISM;D;D;D;ND;D;P;ND;P;ND;ND;ND;ND;ND;D;ND;ND;ND;ND;ND;;;
+MT21;D;D;D;D;ND;D;P;P;P;ND;ND;D;P;P;D;P;P;P;ND;;;
+NARS;D;D;P;ND;ND;ND;P;D;P;D;P;D;ND;D;P;P;P;ND;ND;;;
+PRODIGY;D;D;D;D;D;P;ND;ND;ND;ND;ND;ND;ND;D;D;ND;D;ND;ND;;;
+RCAA;D;D;D;P;D;D;D;P;ND;ND;ND;P;P;D;D;ND;P;P;D;;;
+REM;D;D;ND;P;D;ND;ND;ND;ND;ND;ND;ND;ND;D;P;ND;P;ND;ND;;;
+SALS (EM1/Funk2);D;D;D;D;D;P;D;D;D;P;P;D;D;D;D;ND;D;D;D;;;
+SCADS;D;D;D;D;P;P;P;P;ND;ND;D;ND;ND;D;D;ND;D;D;D;;;
+Soar;D;D;D;D;D;ND;D;D;P;ND;D;D;D;ND;D;ND;P;ND;ND;;;
+TalaMind;D;D;D;P;ND;ND;D;p;ND;ND;ND;ND;ND;ND;P;ND;ND;ND;ND;;;
+;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+Anteil D;100,0%;100,0%;88,6%;48,6%;48,6%;22,9%;68,6%;54,3%;22,9%;17,1%;31,4%;31,4%;31,4%;80,0%;42,9%;17,1%;37,1%;8,6%;28,6%;46,3%;;46,32%
+Anteil P;0,0%;0,0%;5,7%;22,9%;11,4%;42,9%;14,3%;37,1%;25,7%;25,7%;25,7%;20,0%;11,4%;5,7%;34,3%;34,3%;37,1%;28,6%;20,0%;21,2%;;21,20%
+Anteil ND;0,0%;0,0%;5,7%;28,6%;40,0%;34,3%;17,1%;8,6%;51,4%;57,1%;42,9%;48,6%;57,1%;14,3%;22,9%;48,6%;25,7%;62,9%;51,4%;32,5%;;32,48%
+;;;;;;;;;;;;;;;;;;;;;;100,0%
+;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;

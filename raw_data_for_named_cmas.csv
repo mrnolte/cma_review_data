@@ -1,0 +1,1538 @@
+CMA Name (A1);Report Date (A2) [automatically extracted from bibliography];Terminology (A3);Implemented? (A4);Model (A5);Relatives (A6);Innovations vs Predecessors (A7);Data Type (B1);Content (B2);Detail (B3);Specification (B4);Specifity Level (B5);Structuring (B6);Data Structure (B7);Framed Purpose (C1);Traget Issues (C2);Examples (C3);Processing Algorithms (C4);Test Scenarios (C5);Evaluation (C6);First Year with Work on the CMA;Last Year with Work CMA;Repository;Occurs in Kotseruba and Tsotsos;;
+ACNF;;trace of the reasoning;yes;"Biologically inspired; reconstructs different brain regions as modules. Federated Model: Cognitrons with Micor-tasks are hierachichally structured but also model each other";;;;"""The CBLP’s processes operate on a unit of information called a case. In our adaptive action selection mechanism, a case is represented as a triplet consisting of <problem description, solution, outcome>. A problem description includes the initial stale of the problem situation (the contents of the focus, relevant coalitions of codelets, and feature values of relevant concepts, relevant registers in working memory, etc.), one or more (sub)goals that need to be satisfied in uch a problem situation, and associated behavior streams (action plans) that achieve those goals. A solution is an action plan (behavior stream) whose execution beginning at the initial state of the problem achieves its stated sub)goal(s); ach of which in turn satisfying one or more of the innate drives which are that represent the primary motivation of the Cognitron. An outcome is the expected result (for example, feedback from a human) when the solution plan is applied n the initial state.""
+"" A single interchange may not suffice to produce an appropriate new stream (action plan). But, episodic memory (implemented using case-based memory) stores the sequence of interchanges and the trace of the reasoning used in uilding a new behavior stream. This, along with the already acquired domain and control knowledge stored in the KB and CBLP modules, will help in the effective use of past experience to speed up the learning process.""
+""Respectively, the ACNF and the Cognitron coalitions become emotionally aroused when they form semantic and episodic memories about situations that cause “stress” within an artificial neural system. Stress situations may involve a loss of resources, new data environments that are unfamiliar, new interfaces that are introduced into the environment or situations where the algorithms produced incorrect results. These cognitive representations of emotional situations letter referred to as memories about emotions rather than emotional memories""";;There is a codelet ontology, but I am unsure whther this is used for the metacognitive experiences at all;;;;CBR for improving learning;;;"Respectively, the ACNF and the Cognitron coalitions become emotionally aroused when they form semantic and episodic memories about situations that cause “stress” within an artificial neural system. Stress situations may involve a loss of resources, new data environments that are unfamiliar, new interfaces that are introduced into the environment or situations where the algorithms produced incorrect results. These cognitive representations of emotional situations letter referred to as memories about emotions rather than emotional memories
+ A single interchange may not suffice to produce an appropriate new stream (action plan). But, episodic memory (implemented using case-based memory) stores the sequence of interchanges and the trace of the reasoning used in uilding a new behavior stream. This, along with the already acquired domain and control knowledge stored in the KB and CBLP modules, will help in the effective use of past experience to speed up the learning process.";;;"2010 (""Artificial Neural Emotions and Emotional Memory"" seems to be the first paper)";"2020 ("" Radically Simplifying Game Engines: AI Emotions & Game Self
+Evolution "" seems to be the last paper)";;No;;
+ACT-R;"2012 \cite{Reitter2012a}, 
+2011 \cite{Birlo2011a}";"episodic information
+mental state";"simulation of multi-agent game
+theoretical";"forgetting as adaptation
+Nelson-Narens Model";"ACT-R, ACT-UP
+ACT-R, ACT-R/E";"n/a
+metacognitive self module";"hybrid
+symbolic";"episode strategy (for acquiring information about desired item location; ask or explore), duration
+internal state as captured by special purpose buffers, long term memory; individual rule firings are NOT captured";"high-level, sparse information about episodes
+low-level in principle as the meta state is a function of low level buffers";"not needed, episode structure is simple
+none given";"application-specific
+system-specific (ACT-R concepts)";"specific episodes, not linked to each other
+unpecified";"unspecified; database of chunks?
+unspecified; database of chunks?";"improving strategy selection in foraging game
+HRI";"efficiency of foraging in a dynamic environment
+perspective taking, self-model; probably model of other, and model of other's model of self etc.";"In general:
+foraging game
+object selection with disambiguation from perspective taking
+However, these are not specific to the technique of interest.";"Storing episodes, linking them to their strategies, tracking success, and constructing an average episode from them
+perspective taking, self-model; probably model of other, and model of other's model of self etc.";"foraging game
+object selection";"pilot study with 6 humans and an agent; human-agent negotiation tend to end more satisfactory for both parties
+simulation of a community of ACT-R agents, with a human-inspired forgetting parameter value optimal for ""small-world"" graphs";1993 (It is mentioned by Anderson in https://doi.org/10.1207/s15327051hci1204_5 that ACT-R was first conceptualized in Anderson, J. R. (1993).Rules of the mind. Hillsdale, NJ: Lawrence Erlbaum Associ-ates, Inc.);2024 (svn://act-r.psy.cmu.edu/actr7.x);;Yes;;
+ALMA 2.0;2022;metareasoning, self-knowledge;yes;"Unified level
+
+metacognitive loop (MCL) [3, 81]
+
+[3] Michael Anderson and Donald Perlis. Logic, Self-Awareness and Self-Improvement: The metacognitive loop and the problem of brittleness. J. Logic Comput., 15(1):21–40, 2005.
+
+[81] Matthew Schmill, Michael Anderson, Scott Fults, Darsana Josyula, Tim Oates, Don Perlis, Hamid Shahri, Shomir Wilson, and Dean Wright. The metacognitive loop and reasoning about anomalies. In Michael T Cox and Anita Raja, editors, Metareasoning: Thinking about Thinking, pages 183–198. MIT Press, March 2011.";"There is a predecessors called ALMA (1.0) [74, 75]
+
+[74] Khemdut Purang. Alma/Carne: implementation of a time-situated metareasoner. In Proceedings 13th IEEE International Conference on Tools with Artificial Intelligence. ICTAI 2001, pages 103–110, November 2001.
+
+[75] Khemdut Purang. Systems that detect and repair their own mistakes. PhD thesis, University of Maryland, College Park, 2001.";improved introspection abilities through augmentation of active logic formalism with quatation for nesting of expressions;symbolic;It covers the application of inference rules on available data over time steps;Individual inference steps are traced including internal parameters of the reasoner.;No. The logical part of the data must be conform with the ontology of the reasoner though. But ALMA is a general system and does not ship with a specific ontology, rather the user would define an ontology for a given application, and that would define some of the vocabulary in the traced data.;The data includes system/reasoner specific data.;ALMA records and manages so called \emph{prospects} which are abstract structures for storing formulas and other information related to an inference rule including internal data structures for the reasoner that are not aspects of logic. Prospects are generated for resolution, forward-if, and backward search inference rules which are at each step exhaustively applied to available data.;"ALMA uses hash tables for indexing the data in main memory, the implementation is called TommyDS [50].
+
+[50] Andrea Mazzoleni. TommyDS. https://github.com/amadvance/tommyds/, 2018.";introspection, metareasoning in a logical language. but it is a general framework;The previous active logic formalism did not allow nesting of formulas and thus had only very limited introspection abilities.;Yes there are a lot of toy examples for illustration, highlighting different aspects of introspective reasoning using first order formulas.;Inference rules are applied to the data by the ALMA reasoner.;Yes, there are some example scenarios that include an initial knowledge base, some incremental changes, and the inference results. The test scenarios are concerned with default reasoning with nested beliefs, question answering and modeling agent beliefs.;There is a qualitative evaluation in terms of whether the ALMA 2.0 reasoner is able to reason about introspective aspects that it was not able to do before. And that it does. But there is no technical evaluation, nor an analytical comparison with other metareasoning approaches (differences are discussed in related work though);2001 (https://doi.org/10.1109/ICTAI.2001.974454 seems to be the first mention);2023 (Last push to the Github Repository was in 2023);https://github.com/mclumd/alma-2.0;No;;
+ARMARX;2023;"memory system which is
+- active
+- episodic
+- multi-modal
+- associative
+- introspective
+===================
+Sascha:
+-""data tracing for high-level abilities such as reasoning, explanation, prospection,
+augmentation or simulation""
+- ""traces""
+- monitor: ""monitor the system’s internal cognitive processes""
+- maybe introspection: ""introspection is also strongly related to the ability to monitor
+the system’s internal cognitive processes""
+===================
+[Daniel] meta note: The paper is rather focused on the design of a memory architecture in ArmarX, they motivate it with e.g. introspective abilities but do not explain much about introspective mechanisms.";Implemented;"Unified Level
+Multi-Store Model: R. C. Atkinson, R. M. Shiffrin, Human memory: A proposed system and its
+control processes., The Psychology of learning and motivation: Advances in
+research and theory 2 (1968) pp. 89–105.";"They incrementally improve their own work.
+[35] L. Bärmann, F. Peller-Konrad, S. Constantin, T. Asfour, A. Waibel, Deep
+Episodic Memory for Verbalization of Robot Experience, IEEE Robotics
+and Automation Letters 6 (2021) pp. 5808–5815. doi:10.1109/LRA.2021.
+3085166.";The paper introduces notion of Working Memory. It is further concerned with the distributed architecture of the memory system. Also the commitment that all types of memory are episodic.;hybrid;the authors list object-level information, skills which are associated to executable code, a memory of grasping poses, system state including CPU load etc., vision data and robot state memory. However, the presented system is an extendable one, so there is no fixed commitment about what data is stored in the long-term memory.;There are no examples, only illustrative ones. The data can be in principle both higher and lower level. But nothing is written about internal state of skill execution or so. But in principle you could register a memory component for that too I guess.;No;There are no examples, could be both. e.g. sensor information I would say is to some extend system-specific. No mentions of detailed tracing of methods by name though, they rather use skills as an abstraction and other memory pieces may relate to code pieces indirectly via the skill afaik.;"They use their own data structures called ""ArmarX Interpretable Data Format (IDF)"" that represent entities evolving over time.";"At one point the authors write ""plain text"". I think what they mean is that individual data records are stored as individual files in the file system. Which seems odd to me. In the long term memory they appear to employ file compression methods -- they list JPEG, MPEG and ZIP). In idle state these files are used to train a ""deep episodic memory"" which the authors presented in their previous work.";No;memory should be distributed, access-efficient, associative, episodic, active and introspective;Only toy examples: Navigation and object detection. The examples are not specific to introspective abilities.;"As written before, they use machine learning to train a neural network. The algorithm might be detailed in their previous work. This work also briefly discusses querying the data, but rather informally. Also introspection is mentioned a couple of times. But rather motivational without providing details on algorithms.
+""A special System State memory server can be used to watch the CPU and RAM usage and to change the behavior, e. g. to reduce or increase the maximum size of all memory servers running on this machine. Both, the working memory and the long-term memory hold the stored information episodically, i. e. they hold a dictionary mapping from timestamps to data instances. Additional meta-information such as the name of the provider or the time it took to transfer it to the memory can be used to analyze the data.""";No, there are only two illustrative toy examples which are only informally and briefly described. And they are not specific to the meta-cognitive ability of interest (i.e. introspection);Yes, there is a technical evaluation measuring the performance of the memory system empirically. There is also a mini case study with illustrative toy examples (but it is not very convincing).;2014 (https://doi.org/10.1515/itit-2014-1066 seems to be the first publication);2024 (gitlab is active);https://git.h2t.iar.kit.edu/groups/sw/armarx;No;;
+BICA Family;"\cite{Samsonovich2013a}
+\cite{Samsonovich2013b}
+\cite{Samsonovich2009a}
+\cite{Samsonovich2008a} 
+\cite{Samsonovich2003a} 
+\cite{Samsonovich2006a} 
+\cite{Samsonovich2005a} ";"* Episodic-Memory, Mental state, I-Now, I-Past \cite{Samsonovich2013a}
+* I-Meta \cite{Samsonovich2013b}
+* Imaginary Self \cite{Samsonovich2005a}
+* ""Frozen"" Mental state \cite{Kalish2010a}
+
+-----------
+Moral schema, Mental state, I-Meta, social reasoning, higher-order feeling, appraisal,   \cite{Samsonovich2013a}
+(training) fluid intelligence (problems that are novel in their components, independent of previously acquired specific knowledge or the background) \cite{Samsonovich2013b}
+the study introduced and designed architecture known as Constructor: a metacognitive architecture inspired by the conscious brain-mind that integrates multiple instances of the self with virtual reality. “The self” here refers to the notion of the minimal subject-self: the unique owner of experience and the author of voluntary actions \cite{Samsonovich2009a} 
+Cognitive Constructor: The SRL assistant that we call Cognitive Constructor (CC) is based on the cognitive architecture GMU BICA\cite{Samsonovich2008a} 
+";"Different implementations \cite{Samsonovich2013a}, but others, e.g. Constructor do not seem to be implemented  \cite{Samsonovich2009a}
+
+---------
+random social interactions in small groups, either homogeneous – including virtual agents only, or heterogeneous – including virtual agents and a human participant. The paradigm involves N actors interacting by means of M possible actions performed in discrete time t. in the present study were N = 3, M = 4 \cite{Samsonovich2013a}
+";"* Biologically inspired with explicit mappings to the human brain \cite{Samsonovich2013a}
+* ""True"" Metacognition: Cognition is not a separate module but turned on itself \cite{Samsonovich2009a}
+* Mental state formalism is biologically inspired and they name supporting studies \citep{Samsonovich2009b}
+Unififed Level
+
+---------
+builds on: GMU BICA and its variation called Constructor. inspired by human cognition, specifically how emotions and human cognition are intertwined from birth and develop inseparably over time. eBICA can be mapped onto the human brain structures as follows.  Working memory: activity in ventrolateral prefrontal cortex, .... Cognitive map for episodic and spatial reference memory: hippocampus,..... \cite{Samsonovich2013a}
+
+based on studies that found working memory training using the dual N-back paradigm results in improvement of fluid intelligence \cite{Samsonovich2013b}
+inspired by self-regulated learning (SRL). SRL is a general, ubiquitous in the human society paradigm of learning guided by metacognition, self-motivation and strategic action. \cite{Samsonovich2009a} 
+Self-Regulated Learning (SRL) \cite{Samsonovich2008a} ";"BICA, eBICA, Constructor, Cognitive Constructor (family members)
+GMU-BICA";"Simulationist Theory of Mind
+
+active mental states are represented in virtual environment \cite{Samsonovich2009a}  
+the integration of symbolic and connectionist representations at the top representational level \cite{Samsonovich2006a} ";"The virtual environment provides a symbolic representation of the current cognitive paradigm and is made directly accessible to the human interacting with the artifact. Also there is an interface with a subsymbolic level (mediated by primitives (functions) in procedural memory) \cite{Samsonovich2009a} 
+At the top representational level, there is an integration of symbolic and connectionist components. On the symbolic side, the notion of Self and a formal system built on schemas (working memory, episodic memory, semantic memory, input-output buffer). The connectionist side incorporates neuromorphic cognitive maps: neural networks enabling associative indexing of symbolic memories, path-finding in cognitive spaces, and reinforcement learning (procedural memory, the driving engine, and the reward and punishment system). \cite{Samsonovich2006a} \cite{Samsonovich2005a} ";"*   ""Episodic memory stores inactive mental states clustered into episodes– previous contents of working memory. Therefore, episodic memory consists of similar structures to those found in working memory, that are ‘‘frozen’’ in long-term memory."" \cite{Samsonovich2013a}
+*   ""Mental states switch their perspectives with time: I-Next becomes I-Now, I-Now becomes I-Previous, and I-Previous becomes one of I-Past, is deactivated and stored in episodic memory. Mental state dynamics is constrained by self-axioms (Samsonovich et al., 2009). Episodic memory is a collection of inactive mental states clustered into episodes previous states of working memory. These mental states, when become relevant, can be activated and retrieved back into working memory with an ‘‘I-Past’’ label."" \cite{Samsonovich2013a}
+* Appraisals of self and of others, e.g., that the agent is exited \cite{Samsonovich2013a}
+* ""Episodic Memory consists of groups of “frozen” mental states that were previously active (i.e., were present in working memory) and may become active again, although in a new for them status of the past. The notion of episodic memory includes not only retrospective memories of actual experiences attributed to the self (Tulving, 1983), but also prospective memories, including plans (Zimmer et al., 2001), and more generally, memories of any imaginary experiences (dreams), not all of which, however, may be remembered. "" \cite{Samsonovich2009a}
+* The mental states such like ""I-Previous"" contain stuff like ""Verify hypothesis: Worried about wife; Answer: No""  \cite{Samsonovich2009a}
+* Attitude (e,g, intended, previous) \cite{Samsonovich2009b}
+* ""While the volume of working memory may be limited to a reasonably small number of mental states, like the “magic number” seven plus-minus two (Miller 1956, Lisman and Idiart 1995), the volume of episodic memory is virtually unlimited: the system should be able to remember its entire life experience."" \cite{Samsonovich2006a}
+* ""Again, states in our framework are bound instances of schemas. One way to represent a schema is to view it as a graph, the nodes of which are associated with “terms”. Each term represents some mental category (and therefore refers to a schema associated with that category). The root term of a schema represents the mental category associated with this schema itself. A simplest design of a schema is just the root term. Each term, either in a schema or in a state, is an object (in the object-oriented-programming sense) with a standard set of slots that specify parameters of the term, including the name of a mental category, a mental perspective, an attitude, the mode and the status of binding, etc. To bind a schema means to assign particular values to parameters of its terms (not necessarily all parameters and all terms). Generally, a schema specifies constraints and relations among the valuesof parameters of its terms. In addition, it may specify the order in which the terms should be bound and “side effects” of binding: e.g., creation of related states, schemas, etc."" \cite{Samsonovich2003a}
+* ""A given mental state represents a particular mental perspective of the Self, together with all experiences attributed to this instance of the Self"" \cite{Samsonovich2005a}
+
+
+-------------
+The mental state formalism in eBICA formalizes a view of simulationist Theory of Mind. The minimal self  is associated with a viewpoint, specifying the identity of the subject, the time, the place, etc. According to this attribution, all higher-level symbolic representations in working memory can be partitioned into ‘‘boxes’’ labeled in an intuitive self-explanatory manner: ‘‘I-Now’’, ‘‘I-Previous’’, ‘‘He-Now’’, and so on, accordingly to the represented mental perspectives. These ‘‘boxes’’ represent mental states. 
+A schema is understood here as a universal form of all symbolic representations in eBICA. E.g., it is used to represent any concept, percept or category, including entities, properties, events, relations, etc., plus possibly non-conceptual knowledge or experiences, e.g., feelings.\cite{Samsonovich2013a}
+the CC (Cognitive Constructor ) detects students' mental states as part of the intervention (Theory of Mind?). The accuracy of these mental states is verified by comparing them to evaluation that the students themselves complete. \cite{Samsonovich2008a} 
+episodic memory is deactivation and storage of mental states found in working memory that are about to expire, also represents imaginary experiences such as previously considered goal situations. The volume of episodic memory is virtually unlimited: the system should be able to remember its entire life experience. Mental states in episodic memory can be viewed as organized into short sequences or clusters called episodes that once were co-active in working memory. \cite{Samsonovich2006a} 
+";"Episodic memory stores inactive mental states clustered into episodes – previous contents of working memory \cite{Samsonovich2013a}
+Experimental setup for study of interventions in math problem solving, implemented using a sequence of problems in high school algebra \cite{Samsonovich2008a} ";"* Mental State Formalism based on Theory of Mind \cite{Samsonovich2013a,Samsonovich2009b}
+
+
+---------
+The mental state formalism allows for the simulation of Theory of Mind. Mental states inherit content from each other. \cite{Samsonovich2013a}
+schemas, organized into a semantic net? \cite{Samsonovich2009a} 
+";Moral schemas that represent appraisals of appraisals which correspond to higher-order feelings, could be used to describe processes that are metaphorically linked to human cognition. \cite{Samsonovich2013a};"* Graphs linked as episodes \cite{Samsonovich2013a}
+* ""groups of “frozen” mental states"" \cite{Samsonovich2009a}
+* Mental states that are active in working memory form an episode \cite{Samsonovich2009b}
+* Cognitive Maps encode the proximity of Episodic Memories to index them based on distances computed via neural networks \citep{Samsonovich2006a}
+* ""The content of each mental state is a set of instances of schemas bound to the given mental perspective and to each other."" \cite{Samsonovich2006a}
+
+------
+A schema is defined by a template stored in semantic memory, is representable as a (hyper)graph consisting of nodes and links connecting them. It can be also represented as a table, in which the first row (the header) is a string of terminal nodes including the head and terminals. The rest (body) consists of internal nodes organized into rows of the table, each of which corresponds to a header of some other schema \cite{Samsonovich2013a}
+(in the congnitive map, there is) a contextual map that indexes episodic memories (examples of dimensions for the contextual map would be: time and location). \cite{Samsonovich2006a} ";;"* Emotions as Cognition \cite{Samsonovich2013a}
+* Training fluid intelligence \cite{Samsonovich2013b}
+* Human-Level Learning, Metacognition, Self-Awareness \cite{Samsonovich2009a}
+* Self-regulated Learning \cite{Samsonovich2009b}
+* Consciousness \cite{Samsonovich2005b}
+* Sense of Self for team behavior \cite{Samsonovich2003a}
+
+------
+introduce emotional elements at the core of virtually all basic cognitive process in BICA \cite{Samsonovich2013a}
+tried to achieve fluid intelligence in artificial cognitive systems (here BICA) \cite{Samsonovich2013b}
+used as an SRL assistant to students in mathematical problem solving paradigms \cite{Samsonovich2008a} 
+";"* Remember what has been done before falling asleep \cite{Samsonovich2005a}
+
+-----
+the science of complex social emotions and their computational models is still at its infancy so they need to be improved. it aims to build a unifying cognitive theory of emotions \cite{Samsonovich2013a}
+introduced Core Cognitive Competency (CCC) , the ""core social competency"" is a centerpiece and a vital part of CCC. The hypothesis is: there is a limited set of cognitive abilities, such that, once implemented in an agent, they will allow this agent to grow cognitively and socially up to the human level of intelligence, understood as intelligence in general rather than intelligence in a specific domain. \cite{Samsonovich2006a} ";"* Some small examples, but no running one  \cite{Samsonovich2009a}
+* One very vague description about the CMA remembering the state before falling asleep
+
+
+------
+The paradigm consists of random social interactions in a small group. Groups were either homogeneous – including virtual agents only, or heterogeneous – including virtual agents and a human participant.  \cite{Samsonovich2013a}
+
+“yes-no” game: a paradigm of learning how to solve problems that requires metacognition. The task for the agent in this game is to explain a given narrative. The only available actions for the agent are questions. only three possible answers can be given by the human participant who knows the story: “yes”, “no”, and “irrelevant”. \cite{Samsonovich2009a} 
+Experimental setup for study of interventions in math problem solving, implemented using a sequence of problems in high school algebra \cite{Samsonovich2008a} ";"* ""In BICA, a metacognitive mental state that monitors and controls other active mental states in working memory is called I-Meta. It creates a token for each monitored mental state, and can be used, e.g., to optimize interactions among mental states. In our case, the task for I-Meta is to implement activity-driven self-organization. This task requires not only monitoring of mental states themselves, but also awareness of their substrates – parts of the system that need to be expanded or further augmented with available resources in response to detected demands. Details of operation of the metacognitive component should be developed based on empirical studies."" \cite{Samsonovich2013b}
+* The states process stuff themselves \citep{Samsonovich2009b}
+* Earlier, external ""drivers"" were responsible: ""From a computational point of view, we can say that our notion of a schema generalizes the notion of a production in Soar and the notion of a chunk in ACT-R: schemas and mental states are data structures rather than active elements. They need drivers in order to function. Here by a “driver” we refer to an active object (e.g., an executable function) that performs standard procedures of processing of charts representing mental perspectives, schemas, mental states, and the relations among them. Procedures are separate elements of our framework: they are scripts associated with drivers that represent basic metacognitive skills. Drivers and procedures constitute the content of the procedural memory. In particular, procedural memory in this framework includes the following drivers: Clock (chart status updating and subjective time flow), Predictor (probing candidates for mental states), Scanner (binding schemas), Completer (executing states), Terminator (eliminating states to keep pre-set memory limits for each chart), Stimulator (goal activation), and Ego, that performs a broad spectrum of tasks at a meta-cognitive level (voluntary actions, mental simulations, internal conflict resolution, self-evaluation, etc.). All drivers may work in parallel. In addition, most drivers may exist in multiple copies working in parallel. This circumstance makes the model suitable for implementation on parallel computers."" \cite{Samsonovich2003a}
+* the “I-Meta” state is supposed to initiate planning processes in order to move from the “Now” state to imagined states that might be advantageous \cite{Samsonovich2002a}.
+* I-Meta encourages further exploration of imaginary states that are closer to the goal
+
+-------
+Dynamics of eBICA in general develop as briefly outlined below. At the core is the standard cognitive cycle: perceive, understand, generate ideas of possible actions, select intention consistent with working scenario, commit the intended action, check the outcome against expectation, and resolve surprises, if any. \cite{Samsonovich2013a}
+";"N-back test, and An example of a test that looks similar to APM (Raven’s Advanced Progressive Matrices) \cite{Samsonovich2013b}
+* Navigation in CASTLE \citep{Kalish2010a}";"not used but mentioned two test: “breaks of presence” and “surprise mirror tests”. There is a close relation between the feeling of self-presence in virtual reality, and the feeling of another agency present in virtual reality. Both phenomena can be measured using “breaks of presence” and “surprise mirror tests” sensitive to key aspects of the minimal self. \cite{Samsonovich2009a} 
+* Showed that I-Meta is useful for navigation \citep{Kalish2010a}";"2002 (""General Purpose Meta-Cognitive Systems: From Philosophical Ideas to a Computational Framework"" seems to be the first work)";2024 (https://link.springer.com/article/10.1134/S1054661824700640 is on eBICA);;yes;;
+CARINA;2018 \cite{MaderaDoval2018a, Florez2018a, caro2018introduction } -- 2019 \cite{CaroPineres2019a};Self-model, meta-level, Introspective monitoring, performance profile, reasoning trace (internal representation) \cite{CaroPineres2019a};Implemented \cite{CaroPineres2019a};Nelson Narens;MISM (framework);Formalization in Denotional Mathematics;Symbolic \cite{Florez2018a};"Metadata / Profiling data of cognitive functions (start and end time, active / inactive state, priority level, input parameters, output parameters, preconditional mental state, postconditional mental state, goals, subgoals, rules fired to achieve the main goal, state sequence, order of cognitive tasks, feeling of confidence)
+- emotion in this context are happiness, sadness, anger fear which is scalled by an number between 0 and 1. Emotions change the behaviour of Cmattie, e.g. it's reponsivness to a specific contact, if it ""feels guilty"" for not answering it ";;"•        Denotational semantics \cite{Florez2018a}
+•        Profiling data has some ontological representation \cite{MaderaDoval2018a}
+";System specific \cite{Florez2018a};;"•        “In Carina episodic memory is implemented as a Case-Based Reasoning System (CBR) and contains cases that represent events. An event consists of detailed sensoryperceptual information on recent experience (Burgess, Becker, King, & O’Keefe, 2001), which includes perception, motor commands, and internal data structures (Crystal, 2009; Tulving, 1983). Episodic memory is designed to support semantic memory (Conway, 2001; Eichenbaum, 2000). In this sense, episodic memory activity in Carina is analogous to the memory activity concentrated in the hippocampus.” \cite{CaroPineres2019a}
+•        Linked List of Tuples \cite{Florez2018a}";"•        Anomaly detection \cite{MaderaDoval2018a}
+•        Reasoning Failure handling and explanation \cite{caro2018introduction}";"•        “The main objective of the meta-level control is to improve the quality of decisions made by the system.” \cite{CaroPineres2019a}
+•        Deciding to stop planning processes \cite{caro2018introduction}
+";Yes, a scenario covering perception \cite{Florez2018a};"•        “Thus, each cognitive task executed in the object level has a performance profile that is continuously updated in the metalevel. The performance profile is used to evaluate the results of each reasoning task. For example, a robot explores a building and uses its current map of each floor by predicting what kind of room it will find at each location. The performance profile summarizes how well the reasoning is performing and may include its prediction accuracy of what it finds when it opens a door.” \cite{CaroPineres2019a}
+•        “The Sensor has the function of monitoring the profiles of cognitive tasks in order to detect disturbances or anomalies that may represent reasoning failures produced by the cognitive task. FailureDetection reads the properties of a Sensor. If the Sensor finds a discrepancy between observations and expectationsregarding the performance of the CognitiveTask, then FailureDetection detects a ReasoningFailure in the CognitiveTask being monitored. FailureExplanation generates an Explanation of the cause of the ReasoningFailure having as inputs the assessment of the failure and reading the ReasoningTrace. GoalGeneration produces new goals based on the Explanation forsolving the failure detected. In the case of the robot, an explanation might be that its map is incorrect, and it needs to add more details to it (new goal). For example, this building might be an exception to the norm on which its map is based. Figure 2 shows the specification of the introspective monitoring process in CARINA.” \cite{CaroPineres2019a}
+•        Trace inspection via Prolog rules \cite{CaroPineres2019a}
+";;Kinda, the compare the expected runtimes of cognitive functions with the actual ones \cite{Florez2018a};"2013 (""Metamemory for Information Retrieval from Long-term Memory in Artificial Cognitive Systems,"" seems to be the first publication)";2022 (https://www.mdpi.com/2079-3200/10/4/113 seems to be the last publication on this);jalheart/CarinaCore: CARINA: A cognitive architecture for artificial intelligent agents in smart educational environments;No;;
+CLARION;"
+2018 \cite{sun2018computational},
+2006 \cite{Sun2006a}, 2005 \cite{Sun2005a} (~same paper) ";Monitoring buffer;"theoretical
+implemented";"essential needs, pyramid of needs, motivational process, implicit/explicit process
+unspecified
+
+---
+multiple psychological theories mentioned to emphasise on (separate) motivational and metacognitive processes and how they interact with other (regular) cognitive processes. also pointed that motivational and metacognition are explicit and implicit as well so. \cite{Sun2018a}
+Nelseon Narens Model";"not predecessors but competition: ACT-R, CogAff, Psi
+unspecified";"motivational subsystem
+unspecified
+
+---
+The main innovations in Clarion are the dual-representational structure that combines implicit and explicit processes across cognitive, and extensive and core role of motivational, and metacognitive sub-systems. \cite{Sun2018a}";"hybrid
+hybrid
+
+---
+hybrid: dual representational structure (explicit (symbolic or localist) and implicit (subsymbolic, distributed representation provided, for example, by a backpropagation network)) in each subsystems. \cite{Sun2005a} ";"""warmth"" to problem solution
+absolute/relative strength of conclusions; success rate; chunks inferred";"steps (results from subsym nets or rule firings)
+-""-";"
+-""-";System specific (warmth is a calculated value);"sequence of last N episodes
+-""-";"unclear but likely not KGs
+-""-
+
+---
+knowledge is stored in the non-action-centered subsystem (a memory system) that includes neural networks for implicit memory (associative memory networks) and symbolic rules for explicit memory (associative rules). \cite{Sun2020a}";"In general:
+explaining goal creation and management in humans through a computational model
+explaining human metacognitive performance, especially errors
+But the technique of interest is not explained further.";"-""-
+-""-";"yes
+yes
+
+---
+warmth rating in problem (puzzle) solving, in the task of Metcalfe. \cite{Sun2005a}
+";"In general:
+
+Q-learning, rule learning via chunking
+-""-
+
+---
+Q-learning (through a Boltzmann distribution of Q values) and action decision making mechanism. \cite{Sun2005a}
+
+Unclear w.r.t. to the technique of interest.";"In general: replicating human data with an agent
+-""-";"yes, agents match human performance
+yes, agents match human performance, esp. errors
+
+---
+reported that system evaluations and simulations confirmed predictions showing that lower warmth ratings correlate with correct answers in problem-solving task. \cite{Sun2005a}";1996 (https://doi.org/10.1109/ICNN.1996.549047 seems to be the first publication);2024 (The official python implementation has ongiong work: https://github.com/cmekik/pyClarion/tree/v2409);https://github.com/cmekik/pyClarion;yes;;
+CRAM;;Metacognitive Experiences, trace, episodic memory \cite{Nolte2023a};not implemented;"Explicit Mirror of Human Cognition using an expert taxonomy \cite{Nolte2023}
+Nelson Narens";;;Symbolic (ontology) plus sub-symbolic associated data;"(Mental) Event Type, Participancy (Agent, Input such as Premises or Options, Output such as Conclusions or Decisions, Sender, Receiver), Causality and Composition; Component Telemetry, Information flow and transformation; Memory State; Relationship between mental and physical actions";Flexible;OWL Ontology;Antropomorphic and optionally System-specific via a software model;Knowledge Graph with possibly sequential, composite, parallel or interleaved events;OWL ABox;Standardization, Component Orchestration;;yes, but only for representation;only query examples;no;Qualitatively via Competency Questions;2010 (https://doi.org/10.1109/IROS.2010.5650146 seems to be the first publication);2024 (https://github.com/cram2/cram/tree/devel has work on it);;yes;;
+FAtiMA;;Autobiographical Memory;implemented;"OCC Model of Emotions
+Unififed Level";;;symbolic?;Emotions of the agent linked to the causing event;Only emotions, therefore few details;OCC model emotions;Anthropomorphic (emotions);;;Creating a toolkit to develop different cognitive architectures;"""Sports Team Manager is also able to take full advantage of the Autobiographic Memory component of FAtiMA. Because each of the player’s decisions is saved into the character’s memory, a history of events can be preserved. As such, it can also be reloaded in further play sessions, allowing for the possibility of a persistent game emotional state and decision making""";"""Sports Team Manager is also able to take full advantage of the Autobiographic Memory component of FAtiMA. Because each of the player’s decisions is saved into the character’s memory, a history of events can be preserved. As such, it can also be reloaded in further play sessions, allowing for the possibility of a persistent game emotional state and decision making""";;;Case studies;"2005 (""FAtiMA Toolkit: Toward an Accessible Tool for the Development of Socio-emotional Agents"" says this)";2024 (github https://github.com/GAIPS/FAtiMA-Toolkit has work on it);https://github.com/GAIPS/FAtiMA-Toolkit;No;;
+FORR;;trace, history;implemented;Nelson Narens;;;;"""After each task, the object level forwards to the metareasoning level the history and outcome of the task, the computational resources consumed, and the contribution of each heuristic to each decision.""";;;system-specific;;;;"* FORR addresses a problem class (a set of similar problems). Metareasoning assesses the program ’ s skill within that class and the effectiveness of each procedure there. Metareasoning also determines whether to continue learning about the class, to stop, or to restart the entire learning process. Most dramatically, for a given class, metarea soning can reformulate the object level to eliminate ineffective procedures and favor superior ones.
+* FORR ’ s metareasoning extracts training instances from the (likely imperfect) trace of each solved problem during learning. A  training instance  is a problem state, the available choices there, and the decision made by the model of expertise. A  positive  training instance selects a correct action; a  negative  training instance does not. Weight learning judges the performance of Advisors on training instances. ";;"""Tier-3 Advisors’ opinions express preference strengths that are 
+combines with weights during voting to select an action. A FORR-based system learns 
+those weights from traces of its problem-solving behavior. "" \citep{Samsonovich2010}";;One experiment on board games but not specific to us;"1991 (according to ""https://link.springer.com/article/10.1007/BF02454222"")";2024 (Semaforr, a forr cognitive architecture, has work on it: https://github.com/RajKorpan/semaforr);https://github.com/RajKorpan/semaforr;yes;;
+H-Cogaff;"2018 \cite{Kennedy2018computational}
+2011 \cite{Kennedy2011a}, 2010 \cite{Kennedy2010a},
+2005 \cite{Sloman2005a}";traces, representation;"theoretical
+theoretical, maybe some simulation work
+theoretical";"appraisal theory, action readiness, CEOS model of hard to maintain behavioral change, PRIME model of motivation
+unspecified
+perceptual pathways
+Single Meta-Level";"unspecified
+CoxRaja2007, Emotion machine
+unspecified";"unspecified
+meta-level modules as similar to object-level, distributed meta-management
+previous architectures viewed as CogAff subsets; multi-abstraction-level perception and action";"unspecified
+symbolic
+unspecified";"""attention focus and current potential actions""
+""recently fired rules"", short term memory contents
+unspecified";"unspecified
+low-level
+unspecified";"unspecified
+ontology of mental states is mentioned
+unspecified";"unspecified
+system-specific
+unspecified";"unspecified
+continuous
+unspecified";"unspecified
+unspecified
+unspecified";"computational model of emotion regulation
+self-protection, explainability
+unspecified";"emotions as involuntary, needing to be counteracted by ""affective force""
+resilience of meta-level(s) to failure
+unspecified";Yes, for self explanation \cite{Kennedy2011a}, but not very detailed;"symbolic, use trace of reasoning to decide if disturbance is inner/outer caused
+trace inspection, rule learning(?)
+unspecified";No;"no
+no
+unspecified (no; this seems a position paper)";1991 (According to https://cogaffarchive.org/#start);2016 (Apparently the last update on the website https://cogaffarchive.org/);;yes;;
+ISAAC;1997 \cite{Moorman1997a};"Reflection, most importantly: ""metareasoning representation""
+==================
+Sascha:
+""reasoning traces"" (p. 162)
+""keeping Track"": "".... the inspector task is responsible for keeping track of the activity of the system, including which supertasks are being called upong."" p. 217
+
+For future uses of this data the thesis uses ""reflection""
+==================
+meta comment: A quite comprehensive knowledge-driven framework. Unfortunately I do not see much details about the reflection process! Also there are no concrete examples of traces.";Both. Chapter IV proposes a theory, and VII its implementation.;"There are many works in Psychology that inspired this work. Chapter III is full of references and statements about how some work was inspiring the author. These include:
+- ""substrata factor theory"" Holmes (1953)
+- ""story grammar theory"" Rumelhart (1977)";"Inspired by:
+- BORIS model by Dyer, M. (1983). In-Depth Understanding. MIT Press, Cambridge.
+- ALEC by Simina, M. and Kolodner, J. L. (1997). Creative design: Reasoning and understanding. In Proceedings of ICCBR-97.";"- ISAAC can handle novel concepts, BORIS not (BORIS is not a creative reader)
+- ALEC is a design system, ISAAC for understanding";Symbolic (semantic network);"It covers reasoning traces which are lists of ""conceptual nodes"" representing the history of the reader's actions and their results as well as ""control messages"". New concepts are created on the fly that represent evolution of understanding during course of understanding text.
+
+"" The reasoning trace is a list of conceptual nodes representing the history of the
+ reader's actions which were undertaken to arrive at a comprehension of the story.
+ In particular, the specific actions which were controlled by the control supertask are
+ maintained in this reasoning trace. Another possibility is that all actions performed
+ by the reader could be recorded. However, the reasoning trace represents the level
+ of behavior which the reader can actively reflect on; the control supertask and the
+ actions it controls best captures this level of description. Future work and experi
+mentation with the model and with human performance data should be able to reveal
+ how accurate this claim is.""";Rather higher-level, conceptual knowledge. There is no example of traced data.;Yes, semantic networks are used, but no full formal definition of traced data is given. The author uses an ontology though. But it is mostly informally described.;Pretty sure not system specific, no full example is given.;"Frames in a semantic network. Temporal relations are asserted between concepts to represent temporal evolution of knowledge.
+
+""The reasoning trace is a list of conceptual nodes representing the history of the
+ reader's actions which were undertaken to arrive at a comprehension of the story.
+ In particular, the specific actions which were controlled by the control supertask are
+ maintained in this reasoning trace. Another possibility is that all actions performed
+ by the reader could be recorded. However, the reasoning trace represents the level
+ of behavior which the reader can actively reflect on; the control supertask and the
+ actions it controls best captures this level of description. Future work and experi
+mentation with the model and with human performance data should be able to reveal
+ how accurate this claim is.""
+
+""At the top-most level, the concepts within the theory can be seen as being rep
+resented in a standard frame-slot-filler style of notation. However, the underlying
+ representation is a conceptual graph—every frame, every slot, and every filler exists
+ in the knowledge base as specific nodes in the graph. Slots are nodes which act as
+ relationships between other nodes within the knowledge system. In addition to the
+ actual representation, there are certain elements which all concepts share. First, all
+ concepts possess a current function. This represents which known role the concepts
+ is filling at the current point in reasoning. Second, supporting this is the idea that
+ certain slots represent primary attributes—those features of the concept which al
+low it to accomplish its function. Finally, the remaining slots represent secondary
+ attributes—features of the concept which are known but which are not currently
+ contributing to the explanation of how it achieves its function""";"The data is stored using the MOORE memory system which is designed for semantic networks (Ram & Francis, 1996).
+
+Ram, A. and Francis, Jr., A. G. (1996). Multi-plan retrieval and adaptation’ in In Leake, D. B, editor, Case-Based Reasoning: an experience-based agent. Experiences, Lessons, & Future Directions. AAAI Press, Menlo Park, CA.";Creative understanding in reading tasks;"As far as I can see the aspect of ""creativity"" is probably the main thing that the author improved over related work. So that the system can handle text with novel concepts.";Yes, the author uses sentences taken from short stories for illustration.;A custom algorithm for text comprehension which is described in this work.;Yes, the author uses short stories, and demonstrated question answering capabilities. But the tests do not address meta-cognitive abilities directly as far as I can see.;There is a qualitative evaluation of the system answering some types of questions after processing a short story. No separate evaluation of meta-cognitive capabilities is done;"1992 ("" A New Perspective on Story Understanding"" seems to be the first paper)";"1997 (""A Functional Theory of Creative Reading: Process, Knowledge, and Evaluation"" seems to be the last paper)";;no;;
+MAMID;"Robin: 2005 (Hudlicka)
+==============
+Daniel:";"Robin: cognitive-affective, feeling of confidence (FOC), emotion-focused coping
+================
+Daniel: metacognition (the authors consider a subset of metacognitive functions)";"Robin: no (in the paper they write that they plan to implement it for a ""NASA scenario"" whatever that is)
+==============
+Daniel: theoretical";"Robin: feeling of confidence (e.g. Narens 94)
+Nelson and Narens
+=====================
+Daniel: 
+Wells’ and Matthews S-REF model (Wells, A. 2000. Emotional Metacognition.)";"Robin: not mentioned
+=================
+Daniel: No";"Robin: extension of MAMID for ""some"" metacognitive functions
+================
+Daniel: Not applicable";"Robin: Symbolic KB with rules + beliefs and knowledge about cognitions
+=============
+Daniel: Unclear";"Robin: influence of FOC on accepting decisions, interactions between metacognition and emotion
+==============
+Daniel: Unclear, the authors write that ""beliefs and knowledge about cognitions"" is stored in a ""belief net"". And they consider metacognitive monitoring strategies. I guess the strategy would then determine what exactly is monitored.";"Robin: ?
+=============
+Daniel: Unclear";"Robin: No formalism is used, the paper is a roadmap outlining an idea and future work
+===================
+Daniel: No";;"Robin:
+- the different components of the congitive architecture have their own long-term memory
+- attributes of mental constructs: familiarity, novelty, salience, ..
+================
+Daniel: Unclear";"Robin:
+- not defined
+- only mentioned: rules, belief networks, situations, expactation, goals
+====================
+Daniel:
+There was no implementation when the paper was published.";"Robin:
+- explaining human behaviour
+- first usecase: simulate peacekeeping of army commanders (with US military)
+====================
+Daniel:
+Explaining human behavior, social agency";"Robin:
+==============
+Daniel: Modeling interactions between metacognition and affective processes to provide more realistic model of human behavior.";"Robin: No, there is no full discussions of scenarios for the metacognitive component
+==================
+Daniel: No. The original MAMID publication had a peacekeeping/military scenario though.";"Robin: not applicable
+===================
+Daniel: No implementation";"Robin: not discussed
+============
+Daniel: No";"Robin: none
+============
+Daniel: No";2000 (https://cdn.aaai.org/Symposia/Fall/2000/FS-00-03/FS00-03-010.pdf seems to be the first paper);"2023 ("" Emotions in affective human-computer interaction"" is the last paper I found)";;yes;;
+MCL Family;2017 \cite{MBale2017a};"introspection, self-improvement\citepMBale2017a}
+ monitoring \citep{Schmill2007a}
+Episodic memory \citep{MBale2014a}";implemented (at least partly Kasai is implemented but not the full GPME agent), also in other instances \citep{Schmill2007a}\citepMBale2017a};"Single Meta-level \citep{Schmill2007a}
+
+Mirror system in the context of social cognition [20] \citep{MBale2017a}
+
+[20] G. Rizzolatti and M. Fabbri-Destro, The mirror system and its role in social cognition., Curr. Opin. Neurobiol., vol. 18, no. 2, pp. 179–84, Apr. 2008.";"There is a detailed comparison with other CCAs in related work. None was mentioned as direct predecessor or competitor. \citep{MBale2017a}
+
+* PRODIGY, SNePS, PRS (competitors) \citep{Schmill2007a}";"Not applicable. \citep{MBale2017a}
+
+* Continous metacognition (""loop"") \citep{Schmill2007a}
+
+MCL2 \citep{Schmill2007a} vs. GPME \citep{MBale2014a}: The latter adds episodic memory";"hybrid: neural networks, plus some symbolic structuring on top \citep{MBale2014a,MBale2017a}
+
+Symbolic (ontology) \citep{Schmill2007a}";"observations at a given time instant are collected in so called frames which are organized into episodes. Sets of episodes that share some properties are further organized into cases. \citep{MBale2017a}
+
+*Indications (including expectations, monitored data), Failures, Responses \citep{Schmill2007a}
+
+Frames are interconnected via temporal, causative, attributive, spatial, order and composition links \citep{MBale2014a}";"higher-level -- things that can be perceived \citep{MBale2017a}
+
+* Unclear \citep{Schmill2007a}";"No \citepMBale2017a}
+
+* 3 different interconnected ontologies \citep{Schmill2007a}";"More general as only perceived characteristics are considered. Yes, Figure 3.35 shows an example. \citep{MBale2017a}
+* Anthropomorphic \citep{Schmill2007a}";"The author uses a custom data structure called ""Kasai"" [3] which is designed to extract grammatical rules from observational data. It uses an artificial neural networks and augments them with state-machine characteristics. \citep{MBale2017a}
+
+[3] K. M. M’Balé, System, method and algorithm to Analyze Data Series to Create a Set of Rules, Patent Pending, 2017.
+
+Frames are sorted into Clusters with the size of some prime number, with one new member representing the cluster and containing the most relevant information \citep{MBale2014a}
+
+Episodes begin when an anomaly is detected and end when ""the anomaly is no longer detected tor decays"" \citep{MBale2014a}
+
+""Episodes with similar anomaly signatures and similar 
+data patterns are clustered into a Case. A case is equivalent 
+to a cluster, but its members are episodes (sets of sequential 
+frames). Therefore, the case centroid is an artificial or 
+abstract episode that contains the most significant 
+information from each member, where significance is a 
+function of the anomaly signature.  "" \citep{MBale2014a}";"The Kasai data structure is used. The vision is that this data structure is directly implemented in hardware circuits. There is a conceptual circuit design listed, but no prototype was produced so far. \citep{MBale2017a}
+
+* Instantiated ontology \citep{Schmill2007a}";"observational learning \citep{MBale2017a}
+
+* Reasoning about failures";"it is not mentioned explicitly how this work enhances state of the art in observational learning. It is a proposal for a neurosymbolic architecture which I think is the main novelty.
+* AI systems are brittle and must self adapt. \citep{Schmill2007a}";"No \citep{MBale2017a}
+
+Yes, Bolo player with an Unanticipated State Change and ALFRED \citep{MBale2017a}";"machine learning, plus a ""Behavior Composition"" heuristic is used to create the episodic structure, and to cluster the episodes into cases. GPME then uses case-cased reasoning for selection of cases based on estimated utility and reward.\citep{MBale2017a}
+
+* The ontologies map (although not directly) from indications to possible failures to responses. \citep{Schmill2007a}
+
+* In GPME, the situation is different: four different types of anaomalies are detected and managed via the ontology";No;Partly. There is only an evaluation for the Kasai data structure with some test cases including a comparison to Weka system for the domain of weather prediction.;"2005 (""Logic, self-awareness and Self-improvement: the Metacognitive Loop and the Problem of Brittleness"" seems to be the first paper)";"2017 (""Behavior oriented intelligence"" seems to be the last publication)";;no;;
+Meta-AQUA;;"•        Introspective Monitoring, trace, trace meta-explanation pattern (TMXP), introspective meta-explanation pattern (IMXP) \cite{Cox2011c}
+•        Models of self, representation \cite{Gordon2011a}";Implemented (there is a Github Repository);Single Meta-Level;Aqua \cite{Ram1995b};Introspective Learning Strategy construction \cite{Ram1995b};Symbolic \cite{Cox2011c};"•        (Faulty) Reasoning events \cite{Cox2011a}
+•        Failure Symptoms, Faults, Learning Goals \cite{Cox2007b}
+•        Trace Meta XPs (“how a system draws conclusions”) vs. Introspective Meta-XPs (“why these conclusions fail”) \cite{Ram1995b}
+•        Main results and side effects \cite{Ram1995b}
+•        “These decide compute combinations are chained into threads of reasoning such that each one initiates the goal that drives the next.” \cite{Ram1995b}
+•        “A Trace Meta XP, representing the trace of the reasoning process, is a chain of decide compute nodes (D C NODES). These nodes record the processes that Multiformulate the knowledge goals of a system, together with the results and reasons for performing such mental actions.” \cite{Ram1995b}
+";"•        Mixed (Both events of cognitive functions such as “Memory Retrieval” But also the underlying Knowledge, e.g., “Tank low”) \cite{Cox2011d}
+•        Mixed (Both what happened, e.g., expectation failures, and the underlying data. However, not of high frequency, i.e., not every single reasoning step) \cite{Cox2007b}
+";•        Explanation Pattern Theory after \textcite{Schank1986a} \cite{Ram1995b};•        Anthropomorphic \cite{Cox2011d} \cite{Cox2007b};;•        Graph-based \cite{Cox2011d} \cite{Cox2007b};"•        Introspective Learning, \cite{Cox2011a} \cite{Ram1995b}
+•        Explainability, Self-Explanation \cite{Cox2011d}
+";"•        Explaining unusual events \cite{Cox2011c}
+•        Learning goal formulation, Introspective Blame assignment, learning strategy construction \cite{Cox2005a} \cite{Cox2007b} \cite{Ram1995b}
+•        However, learning appears to only target declarative knowledge, e.g., to specify existing rules. It is not used to generate failure handling strategies
+•        Cannot probably deal with noisy input \cite{Ram1995b}";"•        Yes: forgetting to fillup Gas \cite{Cox2011d}
+•        Yes: Wrong assumption of why a Wombus was shot \cite{Cox2007b}
+•        Yes: Drug Bust \cite{Ram1995a}
+";Trace Examination \cite{Ram1995b} by applying/matching Introspective Meta-XPs and using associated learning strategies;;yes \cite{Cox1997b,Cox1996a}, Yes \cite{Gordon2011a};"1991 ("" Using Introspective Reasoning to Select Learning Strategie"" seems to be the earliest paper)";2018 (There was some work on Github: https://github.com/COLAB2/Meta-AQUA);https://github.com/COLAB2/Meta-AQUA;yes;;
+Metacat;\cite{York2012a, Marshall2006a};"•  Metacat uses “temporal-traces” that are stored in “episodic memory” \cite{York2012a}.
+•  „self-perception“, „self-watching“, monitor, “temporal record”, Temporal Trace“ \cite{Marshall2006a}";Implemented \cite{York2012a};"“The important point is that the same mechanisms are responsible for both first order and meta-level jootsing in Metacat– namely, Jootser codelets and the explicit representation of processing events in the Temporal Trace. This reflects our belief that a self-watching system should not be organized as a rigid hierarchy of distinct levels, with each level responsible only for detecting and responding to patterns occurring at the level immediately below it, implying the need for an infinite stack of separate ‘‘watcher’’ mechanisms. Instead, a single set of mechanisms should be capable of detecting first-order patterns, higher-order patterns within these patterns, patterns of patterns of patterns, and so on, with all levels fused together and no limit in principle on the potential complexity of the patterns involved.” \cite{Marshall2006a}
+Unified Level";Copycat is a predecessor \cite{York2012a}.;“Building on Copycat, Metacat incorporates some additional components that are not present in its predecessor’s architecture. The most notable of these are the episodic memory and the temporal trace. As the name suggests, the emphasis in Metacat is meta-cognition, which can broadly be defined as the process of monitoring, or thinking about, one’s own thought processes. What this means for Metacat is an ability to monitor—via the temporal trace—events that take place en route to answering a given letter-string problem, such as detecting a “snag” (e.g., trying to find the successor to z, which leads to a snag because the alphabet is does not “circle around” in this domain) or noticing a key idea. Metacat also keeps track of its answers to previous problems, as well as its responses on previous runs of the same problem, both via the episodic memory. As a result, it is able to be “reminded” of previous problems (and answers) based on the problem at hand, which ultimately amounts to the making of meta-analogies (or analogies between analogies). Finally, it is able to compare and contrast two answers at the user’s prompting.” \cite{York2012a}.;Symbolic\cite{York2012a, Marshall2006a}.;"•        “What this means for Metacat is an ability to monitor—via the temporal trace—events that take place en route to answering a given letter-string problem, such as detecting a “snag” (e.g., trying to find the successor to z, which leads to a snag because the alphabet is does not “circle around” in this domain) or noticing a key idea.” \cite{York2012a}.
+•        “Metacat’s architecture includes several new components and mechanisms that allow the program to monitor itself, enabling it to recognize, remember, and recall patterns that occur in its ‘‘train of thought’’ as it makes analogies. To do this, Metacat creates an explicit temporal record of the most important processing events that occur during a run.” \cite{Marshall2006a}
+•        “Metacat stores descriptions of analogies in its long-term Episodic Memory. When a new answer is found, an answer description is created from the information available in the temporal record and the Workspace. This description includes the four letter strings of the analogy, as well as the rules, bridges, slippages, and other structures that give rise to the answer. Other structures called themes are also included, which describe the key underlying concepts of the analogy. Themes provide a basis for comparing and contrasting answers, as well as a metric for judging the degree of similarity between them. For instance, when Metacat makes a new analogy, it may be reminded of a similar analogy it has seen in the past if the themes associated with the newly created answer description, acting as a memory retrieval cue, match those of some previously stored answer description sufficiently well. In effect, the pattern of themes in an answer description serves as an index for storing and retrieving an answer from memory. In addition to remembering answers, Metacat also remembers the snags that it encounters while solving problems. On hitting a snag for the first time, the program creates a new snag description that characterizes the failure in terms of the themes and other structures involved, which it then stores in the Episodic Memory. Snag descriptions can be compared on the basis of their themes, enabling Metacat to evaluate the similarity of different failure situations. Furthermore, comparing the themes of snag descriptions and answer descriptions can provide clues as to how failures can be avoided in certain problems.” \cite{Marshall2006a}
+•        “themes capture the essential aspects of an analogy by concisely summarizing how the letter-strings are perceived in relation to one another”, e.g., AlphabeticPosition and opposite for a and z \cite{Marshall2006a}
+•        “The Trace stores an explicit temporal record of the most important processing events that occur during problem solving. Examples of such events include the strong activation of a theme or concept, making a conceptual slippage, creating a new rule, hitting a snag, or discovering a new answer.” \cite{Marshall2006a}
+•        “When an event is recorded in the Trace, the themes most active at the time of the event are stored along with it. These themes serve as the event’s thematic characterization. In the case of a snag event, the thematic characterization represents a failed way of interpreting the problem. For example, in solving abc)abd; xyz)?, Metacat usually first perceives abc and xyz as going in the same direction, which leads to a snag whose thematic characterization includes the theme String Position: identity.“ \cite{Marshall2006a}
+";"•        “Metacat creates an explicit temporal record of the most important processing events that occur during a run.” \cite{Marshall2006a}
+•        Conceptual level of ideas, which is domain specific (in this case, word analogies) \cite{Marshall2006a}
+•        “Of course, a large number of events of all sizes occur during the processing of almost any analogy problem, ranging from local ‘‘micro’’ events such as individual codelet actions to global ‘‘macro’’ events such as the discovery of new answers. However, only those events above a threshold level of importance get represented in the Trace. This allows Metacat to filter out all but the most significant events, giving the program a very selective, high-level view of what it is doing. One way to appreciate the abstract, chunked nature of the information in the Trace is to consider the typical number of steps that occur during a run of Metacat. This depends on the level of granularity used to describe steps. At a very fine-grained level of description, where each step corresponds to an action performed by a single codelet, a run may consist of many hundreds or even thousands of steps. At this level of description, no two runs are ever exactly the same, even if they involve the same letter-strings (unless both runs start with the same random number seed). On the other hand, at the level of description of the Trace, a typical run consists of a few dozen steps. At this level of granularity, each step corresponds to a single event recorded in the Trace, and represents the actions of many codelets.“ \cite{Marshall2006a}
+";;System / domain specific \cite{Marshall2006a};;;"•        Explainability and evaluation (of proposed problem solutions and their comparison) \cite{York2012a}.
+•        recall of previous solutions \cite{York2012a}.
+•        towards a software that can pass an “unrestricted Feigenbaum test \cite{York2012a}.
+•        “The development of Copycat focused on modelling con text-sensitive concepts and the ways in which they interact with percep tion within an abstract microworld of analogy problems. This approach differs from most other models of analogy in its insistence that concepts acquire their semantics from within the system itself, through perception, rather than being imposed from the outside.” \cite{Marshall2006a}
+•        Case-based reasoning \cite{Marshall2006a}
+";"•        Copycat cannot explain why it rates a solution proposal higher than another \cite{York2012a}.
+•        Copycat tries the same (erroneous) solution over and over again and can’t break that cycle. Metacat analyses the trace to break repetitive behaviours \cite{Marshall2006a}.
+";Yes, the problem “abc ? abd, iijjkk ? ???” is used for illustration, but only in a black-box like fashion, i.e., it is not explained how Metacat uses tracing \cite{York2012a, Marshall2006a}.;"•        “Once processing events have been explicitly represented in the Temporal Trace, they are themselves subject to examination by codelets. This allows Metacat to perceive patterns in its own behaviour in much the same way that Copycat perceives patterns in letter-strings: via codelets looking for relationships among perceptual structures. In Metacat’s case, these perceptual structures include the ‘‘reified’’ processing events in the Trace. When a new answer is found, an answer description is created by examining the temporal record to see which events contributed to the answer’s discovery. This approach is similar in flavour to work on derivational analogy, in which the trace of a problem-solving session is stored in memory for future reference, together with a series of annotations describing the conditions under which each step in the solution was taken (Carbonell 1986, Veloso and Carbonell 1993, Veloso 1994). In Metacat’s case, however, the information in the Trace is used as the basis for constructing an abstract description of the answer found, rather than being permanently stored itself“ \cite{Marshall2006a}
+•        “Various types of patterns, consisting of sets of themes, concepts, or codelet urgencies, can be clamped by the program in response to events in the Trace. Clamping a pattern alters the probabilities that certain types of codelets will run, or that certain types of Workspace structures will be built, which may lead the program to revise its interpretation of a problem by reorganizing structures in the Workspace in accordance with the ideas represented by the pattern. Thus patterns serve as a ‘‘medium’’ through which the program is able to wield control over its own behaviour.” \cite{Marshall2006a}
+•        “If Metacat continues to hit the same snag over and over, a series of snag events will accumulate in the Trace, all with very similar thematic characteriza tions. This similarity may be noticed by codelets (the probability becoming higher as more snags accumulate), causing them to take action by clamping the ‘‘offending’’ themes, including StringPosition: identity, with strong negative activation. This encourages the program to explore alternative ways of interpreting the problem, which may subsequently lead it to discover other answers such as wyz.“ \cite{Marshall2006a}
+•        “If a Progress-watcher codelet runs while a pattern is clamped, it examines the most recent event in the Trace to determine how much time has elapsed since the event occurred. If the amount of elapsed time is less than a minimum settling period, then the codelet simply fizzles, leaving the clamped pattern still in effect. On the other hand, if enough time has passed without any new important events having transpired, the codelet unclamps the pattern and then evaluates the amount of progress that was made since the clamp occurred. Depending on the amount of progress achieved, the codelet may decide to spawn a follow-up codelet to see whether a new answer can be made based on the newly created structures.” \cite{Marshall2006a}
+•        Eventually, other Progress-watchers will turn off the clamp once enough time has passed with no more events having been added to the Trace.
+•        “Faced with several similar clamp events in the Trace, a Jootser codelet decides probabilistically whether to ‘‘joots’’ based on the number of clamps and the average amount of progress achieved by each. The more clamp events there are, the more likely jootsing is to occur, especially if the amount of progress is low, unless recent clamps appear to be making more headway than earlier ones. Jootsing from repeated clamps, however, does not involve clamping any new patterns in response, in contrast to jootsing from repeated snags. Instead, Metacat simply ‘‘gives up’’ in a graceful manner and stops.“ \cite{Marshall2006a}
+•        “When a new answer is found, the answer description created from the information in the Temporal Trace acts as an index into memory, causing other stored answer descriptions to become activated in proportion to their similarity to the new answer. Similarity between answer descriptions is determined by a numerical measure from 0 to 100 called the distance, which measures the amount of overlap of the answer descriptions’ themes and concepts. If the activation level of an answer description exceeds a fixed threshold, Metacat will be reminded of the answer, with the activation level corresponding to the strength of recall.” \cite{Marshall2006a}
+";;Only descriptions are given on what Metacat can do that Copycat can not.;"1999 (""Metacat: A Self-watching Cognitive Architecture for Analogy-making and High-level Perception"" seems to be the earliest paper)";"2005 (""A self-watching model of analogy-making and perception"" seems to be the last paper)";;yes;;
+MIDCA;;"* Introspective monitoring, reasoning trace, episodic memory, representation, self-model  \cite{Cox2011a}
+* cognitive traces \cite{Mohammad2020a}";yes \cite{Cox2021a};Single Meta-Level;Meta-Aqua (included) \cite{Cox2016a}, MCL (predecessor)  \cite{Cox2011a};"Integration  \cite{Cox2011a}
+*Making the implicit expectations (my reasoning is correct) explicit \cite{Dannenhauer2018a}";Symbolic \cite{Cox2021a};"*Input and Ouput of phases \cite{Cox2016a}
+* Mental States (""Selected Goals, Pending Goals, Current Plan, World State, Discrepancies, Explanations, Actions"") and Mental Actions (""Perceive, Detect Discrepancies, Explanation, Goal Insertion (this  updates the set of goals G to be achieved), Evaluate (i.e., checks to see if the state M entails the  current goal gc, and if so, removes it from G), Intend (i.e., selects a new gc from G), Plan (i.e., calls  a planner to generate a plan to achieve gc), and Act (i.e., executes the next step i from , where 1 i )"") - the sequence of mental states is fixed \cite{Dannenhauer2018a}
+* The input, output  and time of invocation are recorded in self-referential object form for the process \cite{Dannenhauer2018a}
+* Uses active logic to encode the steps \cite{Dannenhauer2018a}";;Denotional Semantics \cite{Dannenhauer2018a};"* Mixed (Some anthropomorphic, some system specific, e.g., ""Goal insertion"") \cite{Dannenhauer2018a}";Structured in cognitive phases such as plan and perceive \cite{Dannenhauer2018a};"* Linked list \cite{Cox2016a}
+* ordered dictionary that can be indexed via the phase and cycle \cite{Mohammad2020a}";* (goal-driven) Autonomy \cite{Cox2013a};"* Set when some subsystem should react fast or slow \cite{Dannenhauer2014a}
+* Changing goals at the object level \cite{MunozAvila2015a}
+* Explanation genaration and goal setting ""According to Cox (2007; this volume), the explanation contains a salient antecedent, ??, that represents the root cause of the problem signaled by the discrepancy. The goal, ??c = ¬ ??, is then to achieve the negation of this antecedent, therefore removing the discrepancy and solving the problem."" \cite{MunozAvila2015a}
+* impasse detection \cite{Cox2016a}";"* Yes (vague) about solving an Impasse \cite{Cox2016a}
+* Yes (Wind not considered) \cite{Dannenhauer2018a}";"* Names algorithm to monitor procedures - but the algorithm runs after them and cannot monitor the execution of the procedures themselve \cite{Dannenhauer2018a}
+* Metacognition is done after each cognition phase, never asynchronously \cite{Dannenhauer2018a, Cox2016a}
+* Meta-Explanation Patterns \cite{Cox2021a}";NBeacons and Aggressive Arsonist \cite{Dannenhauer2018a};Yes \cite{Dannenhauer2018a};2011 (https://cdn.aaai.org/ocs/4116/4116-17747-1-PB.pdf is the earliest paper that we are aware off);2023 (There has been activity on Github: https://github.com/COLAB2/midca/commit/fae8307c92caac1f2d182b33a58281595829ac56);https://github.com/COLAB2/midca/;yes;;
+MISM;;Tracing, Monitoring;Implemented as an Air Traffic Control system.;Single Meta-Level;Metamodel of 40 different MCAs;Standardization;;Reasoning structures and rules;;;;;;Standardization;;;;;;"2014 (""Design and validation of a metamodel for metacognition support in artificial intelligent systems"" is the earliest paper)";"2014 (""Design and validation of a metamodel for metacognition support in artificial intelligent systems"" is the latest paper)";;no;;
+NARS (non-axiomatic reasoning system);2018;mental sensation, traces of the system’s inference activity, internal experience;"more theoretical, the paper does not commit to a particular implementation (they state that NARS is a formal model of general intelligence which is ""mostly implemented"")";Single Meta-Level;None are mentioned;Not applicable;Either symbolic (in the simplest case) or hybrid (including sensor channels). But the paper does not provide details about the use of sensoric channels.;"Short answer: it includes everything from subjective perspective of the agent. In more detail, the data is a time-stream of:
+- relations describing physical and mental entities
+- inheritance statements
+- higher order statements similar to Modal logic
+- compound statements of above
+The scope of the data particularly includes mental operations and events expressed using emotional concepts.
+""During each inference cycle, the system “senses” the concept that was selected for processing, as well as the derivation relationship between tasks.""";higher-level. There are no complete examples. Only illustrative sentences are provided.;"Yes, the data is directly represented in a formal logic called Narsese that the authors proposed previously.
+
+Wang, P. (2013). Non-Axiomatic Logic: A Model of Intelligent Reasoning. Singapore:
+World Scientific.";Anthropomorphic;The data is represented as a time-stream of logical sentences. Only the latest n sentences are stored. Concepts are then derived and refined from this buffer.;No implementation details are provided in the paper.;"Notion of ""self""";The paper is not framed as an incremental improvement. Rather it is framed as providing additional details of the system.;Only toy examples are provided.;Inference rules of non-axiomatic logic are applied to the data to form concepts in memory.;No.;No.;"1993 ("" From inheritance relation to non-axiomatic logic."" is the earliest paper)";2024 (https://arxiv.org/pdf/2405.03340 is a very recent paper);Home · opennars/opennars Wiki;yes;;
+PRODIGY;;Problem-Solving trace \citep{Carbonell1991a};implemented;Any coincidence with human cognition is explcitely coincidental \citep{Carbonell1991a};SOAR, ICARUS, THEO (competitors);Maybe the earliest account of learning from traces(?);;;;;;;;Learning \citep{Carbonell1991a};The system is to learn how to optimize its search in problem solving spaces, i.e., when to apply which operator \citep{Carbonell1991a};;"* ""An explanation-based learn ing module analyzes problem-solving traces and creates new selection, rejection, and preference rules to reduce search on future tasks. Other modules control search by analogy with earlier solutions, learn operator descrip tions from experimentation, and learn to improve the quality of solutions"" \citep{Langley2009}
+* "" An explanation-based learning facility [9] for acquir- 
+ing control rules from a problem-solving trace. Expla- 
+nations are constructed from an axiomatized theory de- 
+scribing both the domain and relevant aspects of the 
+problem solver's architecture. Then the resulting de- 
+scriptions are expressed in control rule form, and con- 
+trol rules whose utility in search reduction outweighs 
+their application overhead are retained. "" \citep{Carbonell1991a}
+* ""A derivational analogy engine [13] that uses 
+similar previously solved problems to solve new prob- 
+lems. The problem solver records the justifications for 
+each decision during its search process. These justi- 
+fications are then used to guide the reconstruction of 
+the solution for subsequent problem solving situations 
+where equivalent justifications hold true. Both anal- 
+ogy and EBL are independent mechanisms to acquire 
+domain-specific control knowledge. "" \ctep{Carbonell1991a}";;;"1986 (""Improving the Effectiveness of Explanation-Based Learning"" seems to be the first paper)";2005 (https://www.tandfonline.com/doi/full/10.1080/09528130500281778 seems to be the last paper);Obtaining PRODIGY code;yes;;
+RCAA;2006;historical experience, reflection, History;implemented;single meta-level (but not explicitely mentioned);meta-agent abstract architecture (predecessor);Adds a reflective layer on top of the meta-agent abstract architecture;Symbolic (authors refer to it as knowledge);"""In the detailed model we explicitly care about the order of events as they appeared. This gives us the possibil ity to analyze the causality of events in the system.""";Not specified, rather high-level.;Not in the paper.;Unclear.;Rather individual events, no continuous data is mentioned.;"The data is stored in the ""History"" component of their ""Cognition Module"". But how this is done is not specified in the paper.";Adaptability, autonomy;The agent learns new strategies based on experience;No.;Inductive Logic Programming (ILP);Yes, a logistics scenario is used for validation.;Yes, authors showed that in the test scenario, the agents improved using ILP.;"2006 (""Reflective-Cognitive Architecture: From Abstract Concept to Self-Adapting Agent"" seems to be the first paper)";"2008 (""Multi-Agent Service Selecction Competitive Resource-Constrained Environments"" seems to be the last work on it)";;no;;
+REM;;trace of processing;unsure;single meta-level;They mention MCL, AUGUR, REM, GRAVA (competitors);;;Unclear;Unclear;Unclear;Unclear;Unclear;Unclear;self-adaption;Adapting domain knoweldge;They have examples but off-topic;"Unsure: "". At this point, REM would use the TMK model of the agent, together with the trace of processing that led to the failure, to diagnose the causes of the error. While the trace of processing provides REM with an account of the actual processing that led to the failure, the TMK model provides an account of the desired processing. REM uses these two accounts and information about the specific error to identify the causes for the error.""";Only off-topic;Only off-topic;"2001 (""Meta-case-Based Reasoning: Using Functional Models to Adapt Case-Based Agents"" seems to be the first paper)";"2008 (""Meta-Case-Based Reasoning: Self-Improvement through Self-Understanding"" seems to be the last paper according to the REM website https://bill.murdocks.org/rem/)";;yes;;
+SALS (EM1/Funk2);2013\cite{Morgan2013a}, previous work on Funk 2 in 2011 \cite{Morgan2011a};"- tracing, reflective tracing, causal tracing, monitoring\cite{Morgan2013a, Morgan2011a}
+""representations of traces of the mental processes of the architecture itself""
+- trace of event streams, experiential event streams \citep{Morgan2013a}";implemented;"- ""SALS is inspired by the bottom four layers of the Emotion Machine theory of human commonsense thinking described by Minsky (2006) \cite{Morgan2013a}
+- EM1 as a predecessor is also based on that model\cite{Morgan2011a}
+
+Each planning layer in the SALS Al receives two event streams from the
+layer below that it is trying to control: (1) a stream of all changes in the
+knowledge base that the planning layer is trying to control and (2) a
+stream of all activations and completions of resource executions. \citep{Morgan2013a}
+Tower Model";- SALS is based on the previous implementation of EM1\cite{Morgan2013a};"-  improvements seem to be more on the technical side: addition of parallel computing, improved handling of logging in the code base 
+- common sense narratives can now be specifie in natural languages
+- improved speed
+\cite{Morgan2013a}";Symbolic;"""The deliberation cycle in EM1 leaves a detailed trace of activity, but this activity is usually difficult to look at, so there are special auxiliary predicates that make it easier to look at. For example, some of these convenience predicates are as follows:
+• (asserted-by FACT CRITICISM)
+• (ultimately-asserted-by FACT CRITICISM)
+• (asserts FACT)
+• (engages CRITIC)
+• (called-by C1 C2)
+• (hypothesis-created-by HYP CRITICISM)
+• (opinion-changed-about R S O)
+• (narrative-not-used ACTION NARR)"" \citep{Morgan2011a}
+
+""Causal tracing can always be set to only trace specific layers of abstraction in Funk2, so machine code tracing is only relevant if the system wanted to reflectively learn something about it’s own low-level implementation. Typically, we imagine users of Funk2 mainly tracing and building critics to recognize patterns in their own user-specified contextual hints. There are many other parts of a causal relationship that we would like to be able to refer to in a reflective process that is debugging a bug in a plan:
+• Event or situation.
+• Agents or agencies involved.
+• Knowledge used for compiling those agents.
+• Critics and selectors that were active during the compiling of this decision point.
+• Reflective processes that were monitoring the planning process at the time.
+• Self-reflective critics and selectors that were being used to control the reflective focus.
+• Configurations of self-models activated or suppressed during plan creation.
+• Goals that were active.
+• Self-conscious critics and imprimers1 that were active, if any.
+This a short list of the types of causal knowledge representations that must be handled by different types of causal tracing critic agents."" \citep{Morgan2011a}
+
+""Reification is the process that allows a subgraph in the layer below to be replaced by a symbol in the layer above. A change event object has the following six properties:
+1. time
+2. change-type
+3. source
+4. key-type
+5. key
+6. target
+The ""time"" of the change event object is the clock time at which the change occurred. The ""change-type"" property of the change event object is one of two symbolic values: (1) ""add"" or (2) ""remove."" The ""source"" property of the change event object is the frame-based object in the knowledge base that has had a slot value added or removed. The ""key-type"" and ""key"" properties of the change event object are both symbolic values that together refer to the name of the slot of the frame-based object in the knowledge base that has been added or removed. The ""ta rget"" property of the change event object is the slot value of the frame-based object in the knowledge base that has been added or removed. The ""target"" property can either be a symbolic property or another frame-based object.""";"Detailed; Flexible level of abstraction: """"Causal tracing can always be set to only trace specific layers of abstraction in Funk2, so machine code tracing is only relevant if the system wanted to reflectively learn something about it’s own low-level implementation. """;"There are some predicates defined; see B2. Also, frames with fixed value slots \citep{Morgan2013a}.";Looks mostly anthropomorphic \citep{Morgan2013a};;"""Cause objects are created and linked to parent cause objects with the creation of every new execution event, such as the spawning of a new thread. Typically, tracing of multi-threaded programs gets complicated because of the complex inheritance structure of causes for events. Because we have designated a special register in each thread for a cause object, which monitors and controls memory access, we expect to handle this problem more efficiently by always having this abstract control at the locus of every memory access. Without causal tracing of memory access invoked, our interpreter runs at full speed, while when a piece of memory that requires causal tracing encounters a traced cause, this will create events that are appended to a cause-specific trace. We expect cause objects to be one simplifying key to many complicating problems of credit assignment. Cause objects are frames with typed slots, just like all data in Funk2, but because cause objects follow the causal execution paths of processes, these objects can be used for storing different types of traces of process executions. Funk2 is a reflective frame-based programming language, in which case, “an object would not only represent information about the thing in the domain it represents, but also about (the
+implementation and interpretation of) the object itself: when is it created? by whom is it created? what constraints does it have to fulfill? etc.” [9]."" \citep{Morgan2011a}
+
+\cite{morgan2013a} also contaisn a bunch of infos, from page 106 onwards. But is basically the same";Learning, Blame assignment \citep{Morgan2011a};Anticipation of concesquences of mental actions by learning transframes between before and after states of actions;;"They focus more on the tracing side in \citep{Morgan2011a}
+
+improves planning processes by computing \emph{transframes} \citep{Minsky1975a} between the before and after states of physical actions, learning to hypothesize the consequences of the actions performed by its object-level.
+SALS meta-level transfers this learning strategy from physical to mental states in order to anticipate the consequences of metacognitive control. \citep{Morgan2013a}";Block world \citep{Morgan2013a};Yes, but only on the computational overhead \citep{Morgan2013a};2009 (Initial activity in the github repository https://github.com/bunuelo/funk2/commit/8da88864e2a40770acb140c45803ddd83d4bfd8f);2015 (Activity in the github repository https://github.com/bunuelo/funk2/commit/37e60ea260053c349d8e74c2c70eabffc19751b9);https://github.com/bunuelo/funk2;no;;
+SCADS;1998;"Robin: traces
+=================
+Daniel: Adaptive choices";"Robin: implemented
+=========
+Daniel: Implemented";"Robin: 
+Singular Meta-Level, based on how children learn \cite{Shrager1998a}
+================
+Daniel:
+ - Newell, A. (1990). Unified theories of cognition. Cambridge, MA: Harvard University Press.
+- Van Lehn, K. (1990). Mind bugs: The origins of procedural misconceptions. Cambridge, MA: MIT Press";"Robin
+============
+Daniel: ASCM (Siegler & Shipley, 1995)";"Robin:
+====================
+Daniel: SCADS supports discovery of new strategies through a metacognitive mechanism";"Robin: Symbolic (Applied operators)
+========
+Daniel: Unclear, definitely symbolic but their ""operators"" could also refer to quantitative data I suppose.";"Robin: Sequence of operators \cite{Shrager1998a}
+================
+The trace covers activation of operators during execution of a strategy, plus partial results of operations.";"Robin: 
+==========
+Daniel: lower-level. The operators are rather composed into higher-level cognitive functions.";"Robin:
+====
+Daniel: No";"Robin: Domain-specific \cite{Shrager1998a}
+===========
+Daniel: Unclear";"Robin:
+======
+Daniel: Unclear";"Robin:
+========
+Daniel: Is not specified in the paper";"Robin: Simulation of children's metacognitive learning strategies \cite{Shrager1998a}
+=================
+Daniel: Yes, it is designed to simullate behaviour of children";"* Eliminate redundancy from strategies \cite{Shrager1998a}
+* Reorder the operators in a strategy to optimize performance \cite{Shrager1998a}";"Robin: Yes, but not specifically about the traces (Min strategy discovery)
+==============
+Daniel: Yes, the problem of counting and what strategies we use for it is used as an illustrative example.";"Robin: ""As attentional resources are freed, the model allocates them to the strategy-change heuristics, the second component of the metacognitive system. These heuristics operate on the traces of the cognitive operations that were used to solve particular problems. SCADS includes two strategy-change heuristics: (a) If a redundant sequence of behavior is detected, then delete one of the two sets of operators that caused the redundancy; and (b) if statistics on a strategy’s speed and accuracy show greater success when the strategy is executed in a particular order, then create a version of the strategy that always uses that order (as opposed to the initial procedure of arbitrarily choosing which addend to quantify first)."" \cite{Shrager1998a}
+====================
+Daniel: The metacognitive employs heuristics that operator on traces. These are used to avoid redundancies and optimize ordering of operators within a strategy.";"Robin: Yes, whether the Min strategy is discovered over different sum problems
+==================
+Daniel:
+Yes, also the counting scenario.";"Robin: Yes, over 30 runs that all discover the min strategy
+====================
+Daniel: Yes, there are some quantitative results reported that were consistent with data on children's arithmetic.";"1998 (""SCADS: A Model of Children's Strategy Choices and Strategy Discoveries"" seems to be the first paper)";2005 (https://www.sciencedirect.com/science/article/abs/pii/S0065240705800035 seems to be the last paper);;no;;
+Soar;;Episodic memory;Implemented;"Biologically inspired \citep{Samsonovich2009b}
+Unified Level";;;Symbolic (Applied operators);Visted states, applied operators, and associated results are included, but images or “mental imaginary” are excluded.;Intermediate level (operators);;System-specific (applied operators);Chronologically linked episodes, which can either be a general single processing cycles, or whenever the agent executes an external action.;Delta-encoded;;Saving computational resources, cycle breaking, explanations;;Operators;;;"1983 (""A universal weak method"" seems to be one of the first papers)";2024 (github has activity: https://github.com/SoarGroup/Soar); https://github.com/SoarGroup/Soar;yes;;
+TalaMind;;traces of execution, reasoning about reasoning;yes;Society of Minds;;;Symbolic;"""conceptual processes create concepts to record traces of their execution, which can be the subject of observation and reasoning by other conceptual processes, i.e. reasoning about reasoning can be supported within a TalaMind architecture""";;;;;;;Reflecting past thoughts;;;;;"2014 (""Toward Human-Level Artificial Intelligence -- Representation and Computation of Meaning in Natural Language"" seems to be the first work)";"2021 (""Toward Human-Level Qualitative Reasoning with a Natural Language of Thought"" seems to be the last paper)";;no;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+"COGNET /iGen (Not peer reviewed; exclude)";2004 \cite{Zachary2004a}, 2000 \cite{Zachary2000a};metacognitive control;implemented;competence/performance distinction, theories of expertise, recognition-primed decision making, long term memory;EPIC, SOAR, Pandemonium model of attention;neutral to time granularity of embodiment, attention as weakly concurrent and emergent;mostly symbolic;task ordering, duration, context, and other task information;task-level, large-scale state level (e.g. fatigue, frustration);no;system-specific, examples given;episode ~ sequence of tasks linked in a history;linked feature structures on a blackboard;model human cognitive processes;goodness of fit to human performance on well-defined tasks requiring expertise;air traffic control;case-based reasoning;learning decision rules for air traffic control;"comparison with human results on various metrics from task accuracy to cognitive load/effort; claimed close to human results";;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
