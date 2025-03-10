@@ -1,0 +1,112 @@
+Original Terminology Clusters:
+
+Cluster 0:
+  - autobiographical data
+  - autobiographical memory
+  - autobiographical self
+  - imaginary self
+  - immediate processual self
+  - self-knowledge
+  - self-model
+
+Cluster 1:
+  - contextualized process performance history
+  - monitoring buffer
+  - performance profile
+
+Cluster 2:
+  - episodic information
+  - episodic memory
+  - episodic memory of mental events
+  - episodic-memory
+  - experience memory replay
+  - metacognitive experiences
+  - replay memory
+
+Cluster 3:
+  - event records
+  - experiential event streams
+  - temporal record
+
+Cluster 4:
+  - historical experience
+  - history
+  - internal experience
+  - operational history
+
+Cluster 5:
+  - I-Meta
+  - I-Now
+  - I-Past
+  - meta-information
+
+Cluster 6:
+  - affective state
+  - feeling of confidence
+  - mental Sensation
+  - mental state
+  - representations of mental states
+
+Cluster 7:
+  - cognitive trace
+  - inference trace
+  - reasoning trace
+  - reasoning traces
+  - ReasoningTrace
+  - trace of the reasoning
+
+Cluster 8:
+  - metareasoning representation
+  - representation
+  - representations
+
+Cluster 9:
+  - internal representation of the reasoning processes
+  - mental models
+  - representational model of reasoning processes
+
+Cluster 10:
+  - problem-solving trace
+  - reflective traces
+  - temporal trace
+  - trace
+  - trace of each solved Problem
+  - traces
+
+Cluster 11:
+  - audit trail
+  - trace of execution Events
+  - trace of processing
+  - traces of data through the processing pipeline
+  - traces of execution
+  - traces of the system's inference activity
+  - telemetry
+
+Changes:
+ - Renamed and merged clusters:
+ 	- 0 -> Autobiographical Self
+	- 1 -> Performance Profile
+	- 2 -> Episodic Memory
+	- 3 -> Event Records
+	- 4 -> History
+	- 5 -> Mental State
+	- 6 -> Experience
+	- 7 -> Reasoning Trace
+	- 8 -> Representation
+	- 9 -> (merged with Cluster 8)
+	- 10 -> Problem-solving Trace
+	- 11 -> Processing Trace
+- New Cluster:
+	- Data
+- Moved Terms:
+	- "mental state" from "Experience" to "Mental state"
+	- "metacognitive experience" from "Episodic Memory" to "Metacognitive Experience"
+	- "representations of mental states" from "Metacognitive Experiences" to "Representation" and "Mental State"	- 	- "internal experience" from "History" to "Metacognitive Experiences"
+	- "meta-Information" from "Mental State" to "Data"
+- Copied Terms:
+	- "autobiographical data", "telemetry", "traces of data through the processing pipeline" to "Data"
+	- "experience memory replay", "experiential Event streams" -> "Experience"
+	- "autobiographical memory" -> "Episodic Memory"
+	- "self-model" -> representation
+	- "contextualized process performance history" to "History"
+	- "traces of the system's inference activity" to "Reasoning Trace"
